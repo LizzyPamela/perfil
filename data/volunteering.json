@@ -1,0 +1,153 @@
+[
+  {
+    "key": "vol-rta-systems-2025-06",
+    "org": "UNAH - CURC",
+    "program": "Academic Tutors Network in Systems (RTAS)",
+    "role": "President",
+    "focus": ["Education", "Academic Support"],
+    "start": "2025-06",
+    "end": "Present",
+    "mode": "On-site",
+    "location": "UNAH Campus Comayagua",
+    "bullets": [
+      "Provide academic tutoring and learning support to students, reinforcing key topics, addressing questions, and promoting study habits to improve performance and retention."
+    ],
+    "tags": ["leadership", "tutoring"],
+    "cvTargets": ["scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "vol-red-cross-2024-11",
+    "org": "Honduran Red Cross (Blood Bank)",
+    "program": "Community Health Initiatives",
+    "role": "Analyst (Volunteer)",
+    "focus": ["Health", "Dengue Prevention", "Community Work"],
+    "start": "2024-11",
+    "end": "2025-08",
+    "mode": "On-site",
+    "location": "La Paz, Honduras",
+    "bullets": [
+      "Supported community health initiatives focused on dengue prevention and local well-being.",
+      "Contributed to outreach coordination, improved survey collection workflows, and digitized/tabulated results for analysis and decision-making.",
+      "Provided administrative support to ensure proper documentation and logistics; collaborated with field teams to promote prevention practices."
+    ],
+    "tags": ["health", "data"],
+    "cvTargets": ["scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "vol-unah-faculty-secretary-2024-06",
+    "org": "Universidad Nacional Autónoma de Honduras (UNAH)",
+    "program": "Systems Engineering (Student Governance)",
+    "role": "Faculty General Secretary",
+    "focus": ["Education", "Governance", "Administration"],
+    "start": "2024-06",
+    "end": "2025-08",
+    "mode": "On-site",
+    "location": "",
+    "bullets": [
+      "Supported academic and student governance by coordinating official communications, documenting meetings and agreements, and organizing administrative follow-up.",
+      "Helped ensure transparent and timely coordination between students, faculty, and program leadership."
+    ],
+    "tags": ["leadership", "governance"],
+    "cvTargets": ["scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "vol-transformadores-2024-06",
+    "org": "Asociación Despierta Honduras",
+    "program": "Transformadores de Honduras (4th Edition)",
+    "role": "Participant",
+    "focus": [],
+    "start": "2024-06",
+    "end": "2024-10",
+    "mode": "",
+    "location": "",
+    "bullets": [],
+    "tags": [],
+    "cvTargets": ["general"],
+    "show": true
+  },
+  {
+    "key": "vol-casc-usaid-2024-04",
+    "org": "USAID",
+    "program": "Central American Service Corps (CASC)",
+    "role": "General Volunteer",
+    "focus": ["Service"],
+    "start": "2024-04",
+    "end": "2024-06",
+    "mode": "On-site",
+    "location": "Comayagua, Honduras",
+    "bullets": [],
+    "tags": ["service"],
+    "cvTargets": ["general"],
+    "show": true
+  },
+  {
+    "key": "vol-juvpaz-2024-04",
+    "org": "Jóvenes Universitarios Voluntarios",
+    "program": "Volunteers for Peace (Cohort IV Online)",
+    "role": "General Volunteer",
+    "focus": ["Service"],
+    "start": "2024-04",
+    "end": "2024-08",
+    "mode": "Remote",
+    "location": "Tegucigalpa, Honduras",
+    "bullets": [],
+    "tags": ["service"],
+    "cvTargets": ["general"],
+    "show": true
+  },
+  {
+    "key": "vol-hecau-founder-2024-01",
+    "org": "Universidad Nacional Autónoma de Honduras (UNAH)",
+    "program": "Herederas del Cambio Universitario (HECAU)",
+    "role": "Founder",
+    "focus": ["Human Rights", "Leadership", "Mentorship"],
+    "start": "2024-01",
+    "end": "Present",
+    "mode": "On-site",
+    "location": "UNAH Campus Comayagua",
+    "bullets": [
+      "Founded a student-led volunteer initiative focused on leadership, mentorship, and community impact.",
+      "Lead strategic planning, partnerships, recruitment, training, and project execution; oversee activities that strengthen student participation and social responsibility within the university community."
+    ],
+    "tags": ["leadership"],
+    "cvTargets": ["scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "vol-wtm-8m-2023-03",
+    "org": "Women Tech Makers",
+    "program": "International Women's Day (8M) 2023",
+    "role": "General Volunteer",
+    "focus": ["Community"],
+    "start": "2023-03",
+    "end": "2023-03",
+    "mode": "On-site",
+    "location": "Tegucigalpa, Honduras",
+    "bullets": [
+      "Provided logistics support for the annual International Women's Day commemoration event (8M)."
+    ],
+    "tags": ["community"],
+    "cvTargets": ["general"],
+    "show": true
+  },
+  {
+    "key": "vol-terra-tutor-2014-05",
+    "org": "Fundación Terra",
+    "program": "Becas Tutores",
+    "role": "Scholarship Tutor",
+    "focus": ["Education"],
+    "start": "2014-05",
+    "end": "2014-11",
+    "mode": "On-site",
+    "location": "La Paz, Honduras",
+    "bullets": [
+      "Provided tutoring support for children in mathematics and reading."
+    ],
+    "tags": ["tutoring"],
+    "cvTargets": ["general"],
+    "show": true
+  }
+]

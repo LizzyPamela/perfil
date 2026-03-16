@@ -1,0 +1,102 @@
+[
+  {
+    "key": "proj-pumaneolang",
+    "name": "PumaNeoLang (PNL)",
+    "stack": "Python (lexer, parser, interpreter, generator, Tkinter IDE, Pandas)",
+    "summary": "A programming language designed for data analysis, automation, and statistics with an interpreter, Python code generation, and a GUI IDE.",
+    "url": "https://github.com/LizzyPamela/Puma_Neo_Lang-PNL_IS913",
+    "tags": ["language", "data", "automation"],
+    "cvTargets": ["industry", "general"],
+    "show": true
+  },
+  {
+    "key": "proj-accenture-nordics-simulation",
+    "name": "Software Engineering Job Simulation - Accenture",
+    "stack": "Java, Spring Boot, Architecture Design",
+    "summary": "Simulación de entorno real de ingeniería de software, resolviendo tareas de arquitectura, diseño de sistemas y priorización de backlog.",
+    "url": "https://github.com/LizzyPamela/Accenture-Simulation",
+    "tags": ["software-engineering", "backend", "architecture"],
+    "cvTargets": ["industry"],
+    "show": true
+  },
+  {
+    "key": "proj-oracle-one-frontend",
+    "name": "Oracle Next Education (ONE) Portfolio",
+    "stack": "HTML5, CSS3, JavaScript, React",
+    "summary": "Desarrollo de múltiples aplicaciones front-end y desafíos de lógica de programación bajo el programa especializado de Oracle y Alura Latam.",
+    "url": "https://github.com/LizzyPamela/Oracle-ONE-Challenges",
+    "tags": ["frontend", "web-development", "javascript"],
+    "cvTargets": ["industry", "general"],
+    "show": true
+  },
+  {
+    "key": "proj-xacademy-software-dev",
+    "name": "Análisis y Desarrollo de Software - XAcademy",
+    "stack": "Fullstack, SQL, Software Lifecycle",
+    "summary": "Proyecto de fin de curso enfocado en el ciclo completo de desarrollo: desde el levantamiento de requerimientos hasta el despliegue funcional.",
+    "url": "https://github.com/LizzyPamela/XAcademy-Project",
+    "tags": ["fullstack", "analysis", "database"],
+    "cvTargets": ["industry"],
+    "show": true
+  },
+  {
+    "key": "proj-spring-boot-3-master",
+    "name": "Spring Framework 6 & Spring Boot 3 API",
+    "stack": "Java 17, Spring Boot 3, Spring Security, Hibernate, MySQL",
+    "summary": "Construcción de una API REST robusta siguiendo los estándares de la industria, con persistencia de datos y seguridad avanzada.",
+    "url": "https://github.com/LizzyPamela/Spring-Boot-3-API",
+    "tags": ["backend", "java", "api-rest"],
+    "cvTargets": ["industry"],
+    "show": true
+  },
+  {
+    "key": "proj-python-ai-ml-research",
+    "name": "Python for AI and ML Research",
+    "stack": "Python, NumPy, Scikit-learn, Matplotlib",
+    "summary": "Implementación de modelos de aprendizaje automático y análisis de datos científicos para investigación y toma de decisiones empresariales.",
+    "url": "https://github.com/LizzyPamela/AI-ML-Research",
+    "tags": ["machine-learning", "python", "data-science"],
+    "cvTargets": ["industry", "academic"],
+    "show": true
+  },
+  {
+    "key": "proj-rpa-automation-anywhere",
+    "name": "Enterprise Bot Automation",
+    "stack": "Automation Anywhere, RPA, Excel Automation",
+    "summary": "Diseño y despliegue de bots de software para automatizar procesos administrativos y de ingeniería repetitivos.",
+    "url": "https://github.com/LizzyPamela/RPA-Bots",
+    "tags": ["rpa", "automation", "efficiency"],
+    "cvTargets": ["industry"],
+    "show": true
+  },
+  {
+    "key": "proj-power-bi-data-analytics",
+    "name": "Data Analytics & Visualization Dashboard",
+    "stack": "Power BI, DAX, Power Query",
+    "summary": "Creación de dashboards interactivos para la visualización de KPIs estratégicos y análisis de tendencias de datos complejos.",
+    "url": "https://github.com/LizzyPamela/PowerBI-Dashboards",
+    "tags": ["data-viz", "business-intelligence", "power-bi"],
+    "cvTargets": ["management", "industry"],
+    "show": true
+  },
+  {
+    "key": "proj-it-specialist-javascript-app",
+    "name": "JavaScript Specialist Portfolio",
+    "stack": "JavaScript (ES6+), Web APIs, DOM Manipulation",
+    "summary": "Conjunto de aplicaciones web desarrolladas para demostrar competencia técnica bajo el estándar IT Specialist de Certiport.",
+    "url": "https://github.com/LizzyPamela/JS-Specialist-Portfolio",
+    "tags": ["javascript", "coding", "web"],
+    "cvTargets": ["industry"],
+    "show": true
+  },
+  {
+    "key": "proj-web-design-professional",
+    "name": "Professional Web Design Portfolio",
+    "stack": "HTML, CSS, Responsive Design, UX/UI",
+    "summary": "Diseño y desarrollo de sitios web modernos y adaptables con un enfoque centrado en la experiencia de usuario y accesibilidad.",
+    "url": "https://github.com/LizzyPamela/Web-Design-Portfolio",
+    "tags": ["web-design", "frontend", "responsive"],
+    "cvTargets": ["general", "industry"],
+    "show": true
+  }
+]

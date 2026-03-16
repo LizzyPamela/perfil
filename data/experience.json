@@ -1,0 +1,157 @@
+[
+  {
+  "key": "exp-ua-research-2026-03",
+  "org": "c",
+  "role": "Research Data Engineer",
+  "location": "Remote",
+  "mode": "Part-time",
+  "start": "2026-03",
+  "end": "Present",
+  "bullets": [
+    "Support an international research collaboration analyzing epistemic delegitimization and trust dynamics in Honduras.",
+    "Design and implement data processing pipelines to collect, clean, and structure heterogeneous research data.",
+    "Build and maintain research databases to support quantitative and qualitative analysis.",
+    "Conduct data preprocessing, transformation, and exploratory analysis to prepare datasets for downstream research methods.",
+    "Collaborate with multidisciplinary researchers to ensure data integrity, reproducibility, and analytical rigor.",
+    "Document data workflows and maintain structured datasets to facilitate replicable research outputs."
+  ],
+  "skills": [
+    "Data Analysis",
+    "Research Methods",
+    "Database Management",
+    "Data Pipelines",
+    "Collaboration",
+    "Documentation"
+  ],
+  "tags": [
+    "research",
+    "data",
+    "collaboration"
+  ],
+  "cvTargets": [
+    "industry",
+    "scholarship",
+    "general"
+  ],
+  "show": true
+},
+{
+  "key": "exp-unah-sustainability-2026-02",
+  "org": "Universidad Nacional Autónoma de Honduras (UNAH) — Comayagua",
+  "role": "Member Representative — Commission for Sustainability Initiatives",
+  "location": "Comayagua, Honduras",
+  "mode": "Part-time",
+  "start": "2026-02",
+  "end": "Present",
+  "bullets": [
+    "Appointed by the Campus Directorate to serve as a member of the Sustainability Commission of UNAH Comayagua.",
+    "Support the design and evaluation of sustainability-focused initiatives.",
+    "Participate in cross-functional coordination between academic and administrative stakeholders.",
+    "Contribute to institutional discussions on sustainable development and strategic implementation."
+  ],
+  "skills": [
+    "Sustainability Planning",
+    "Stakeholder Coordination",
+    "Strategic Implementation",
+    "Institutional Development"
+  ],
+  "tags": [
+    "sustainability",
+    "institutional",
+    "sdg"
+  ],
+  "cvTargets": [
+    "industry",
+    "scholarship",
+    "general"
+  ],
+  "show": true
+},
+  {
+    "key": "exp-unah-diciht-2025-06",
+    "org": "Universidad Nacional Autónoma de Honduras (UNAH) — DICIHT",
+    "role": "Undergraduate Research Scholar",
+    "location": "Comayagua, Honduras",
+    "mode": "Hybrid",
+    "start": "2025-06",
+    "end": "Present",
+    "bullets": [
+      "Designed SDG-6-aligned technology proposals for water sustainability, translating local needs into technical inputs.",
+      "Conducted data analysis and organization to support diagnostics and prioritization of water-management challenges.",
+      "Contributed to system modeling, technical diagnostics, and digital strategy planning with traceable documentation."
+    ],
+    "skills": ["Data Analysis", "Technical Documentation", "System Modeling"],
+    "tags": ["research", "sdg6", "data"],
+    "cvTargets": ["industry", "scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "exp-frenael-eu-2025-07",
+    "org": "FRENAEL & European Union (Czechia)",
+    "role": "Research Assistant — Disinformation",
+    "location": "Tegucigalpa, Honduras",
+    "mode": "Remote",
+    "start": "2025-07",
+    "end": "2025-11",
+    "bullets": [
+      "Contributed to research proposal design and analysis focused on strategies and tools to detect and counter fake news and disinformation.",
+      "Supported dissemination efforts to promote critical thinking and digital literacy."
+    ],
+    "skills": ["Research", "Data Analysis", "Reporting"],
+    "tags": ["research", "disinformation"],
+    "cvTargets": ["industry", "scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "exp-usaid-ci-dai-2024-09",
+    "org": "USAID — Conservation International (DAI) | Creating My Future Aquí",
+    "role": "Intern — Coordination and Data",
+    "location": "Tegucigalpa, Honduras",
+    "mode": "Hybrid",
+    "start": "2024-09",
+    "end": "2024-12",
+    "bullets": [
+      "Supported coordination of education and youth development initiatives with operational follow-up and documentation.",
+      "Managed participant data collection, validation, registration, and updates to ensure accuracy and traceability.",
+      "Prepared reports and maintained supporting documentation for basic monitoring and evaluation (M&E)."
+    ],
+    "skills": ["Data Validation", "Documentation", "Coordination"],
+    "tags": ["internship", "coordination", "data"],
+    "cvTargets": ["industry", "general"],
+    "show": true
+  },
+  {
+  "key": "exp-junior-achievement-2024-02",
+  "org": "Junior Achievement",
+  "role": "Technical Internship — Salesforce",
+  "location": "Tegucigalpa, Honduras",
+  "mode": "On-site",
+  "start": "2024-02",
+  "end": "2024-06",
+  "bullets": [
+    "Supported planning and ongoing operational maintenance using Salesforce by tracking and updating key information and activities.",
+    "Assisted in data management and CRM optimization to ensure accuracy in reporting and operational efficiency."
+  ],
+  "skills": ["Salesforce", "CRM Management", "Data Tracking", "Operational Planning"],
+  "tags": ["internship", "salesforce", "crm"],
+  "cvTargets": ["industry", "general"],
+  "show": true
+  },
+  {
+    "key": "exp-independent-tutor-0000-00",
+    "org": "Independent",
+    "role": "English & Math Tutor",
+    "location": "La Paz, Honduras",
+    "mode": "On-site",
+    "start": "2021-01",
+    "end": "Present",
+    "bullets": [
+      "Provided academic tutoring to students from pre-kindergarten through 12th grade, reinforcing targeted topics based on individual learning needs.",
+      "Developed practical support activities to improve understanding, performance, and study habits, contributing to higher academic averages."
+    ],
+    "skills": ["Teaching", "Communication", "Planning"],
+    "tags": ["tutoring", "education"],
+    "cvTargets": ["industry", "general"],
+    "show": false
+  }
+]

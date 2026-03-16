@@ -1,0 +1,19 @@
+[
+  { "type": "API", "skill": "Swagger / OpenAPI", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "Data & AI", "skill": "Google Colab", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "Data & AI", "skill": "Kaggle", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "Data & AI", "skill": "Machine Learning (basic)", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Data", "skill": "Data Analysis", "scale": "Technical", "level": "Operational", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Data", "skill": "SQL", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "DevTools", "skill": "Git", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "Documentation", "skill": "Technical Documentation", "scale": "Technical", "level": "Operational", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Management", "skill": "Project Management", "scale": "Technical", "level": "Operational", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Methodology", "skill": "Scrum", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "Programming", "skill": "Python", "scale": "Technical", "level": "Familiarity", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Programming", "skill": "JavaScript (Node.js, Express, Sequelize)", "scale": "Technical", "level": "Operational", "notes": "", "cvTargets": ["industry", "general"], "show": true },
+  { "type": "Soft Skills", "skill": "Leadership", "scale": "Soft", "level": "Operational", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Soft Skills", "skill": "Critical Thinking", "scale": "Soft", "level": "Operational", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Languages", "skill": "Spanish", "scale": "CEFR", "level": "Native", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Languages", "skill": "English", "scale": "CEFR", "level": "C1", "notes": "", "cvTargets": ["industry", "scholarship", "general"], "show": true },
+  { "type": "Languages", "skill": "German", "scale": "CEFR", "level": "A1", "notes": "", "cvTargets": ["general"], "show": true }
+]

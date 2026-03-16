@@ -1,0 +1,16 @@
+{
+  "defaultLanguage": "en",
+  "cv": {
+    "enabled": true,
+    "targets": ["industry", "scholarship", "general"],
+    "maxBullets": {
+      "industry": 3,
+      "scholarship": 5,
+      "general": 5
+    }
+  },
+  "filters": {
+    "experienceTagsEnabled": true,
+    "skillsGroupingEnabled": true
+  }
+}

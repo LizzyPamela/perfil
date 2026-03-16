@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lizzy Pamela Mejía — Systems Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Tokens ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0B1728;
+      --navy-mid:   #132240;
+      --navy-light: #1E3A5F;
+      --gold:       #C9A84C;
+      --gold-light: #E2C06C;
+      --gold-pale:  #F5E6B8;
+      --white:      #FFFFFF;
+      --off-white:  #F4F6FA;
+      --gray-100:   #E8EBF2;
+      --gray-300:   #9AA3B8;
+      --gray-500:   #5A6480;
+      --black:      #0A0C10;
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 20px;
+
+      --shadow-card: 0 2px 20px rgba(0,0,0,.18);
+      --shadow-glow: 0 0 32px rgba(201,168,76,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section { padding: 80px 0; }
+    section:nth-child(even) { background: var(--navy-mid); }
+
+    /* ── Nav ────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,23,40,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,.2);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gray-300);
+      text-decoration: none;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── Hero ───────────────────────────────────────────────── */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      padding: 100px 0 80px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 80% 40%, rgba(201,168,76,.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 70%, rgba(30,58,95,.6) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero-eyebrow span {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .hero-eyebrow p {
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .hero h1 .accent { color: var(--gold); }
+
+    .hero-headline {
+      font-size: 1.05rem;
+      color: var(--gray-300);
+      max-width: 560px;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .tag {
+      padding: 5px 14px;
+      border: 1px solid rgba(201,168,76,.35);
+      border-radius: 100px;
+      font-size: .78rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 52px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: var(--r-sm);
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .25s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.25);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .84rem;
+      color: var(--gray-300);
+    }
+
+    .hero-meta-item svg { color: var(--gold); flex-shrink: 0; }
+
+    /* Avatar / decorative card */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-end;
+    }
+
+    .initials-block {
+      width: 200px;
+      height: 200px;
+      border-radius: var(--r-lg);
+      background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+      border: 2px solid rgba(201,168,76,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--gold);
+      box-shadow: var(--shadow-glow);
+      letter-spacing: -2px;
+    }
+
+    .stat-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 200px;
+    }
+
+    .stat-card {
+      background: var(--navy-mid);
+      border: 1px solid rgba(201,168,76,.18);
+      border-radius: var(--r-md);
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: .68rem;
+      color: var(--gray-300);
+      margin-top: 4px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    /* ── Section Header ─────────────────────────────────────── */
+    .section-header {
+      margin-bottom: 52px;
+    }
+
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-eyebrow span {
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .section-eyebrow p {
+      font-size: .75rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .section-desc {
+      margin-top: 12px;
+      color: var(--gray-300);
+      max-width: 540px;
+      font-size: .95rem;
+    }
+
+    /* ── Summary bullets ────────────────────────────────────── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .summary-item {
+      background: var(--navy-light);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      padding: 20px 24px;
+      color: var(--gray-100);
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+
+    /* ── Timeline (Experience / Education) ──────────────────── */
+    .timeline { position: relative; padding-left: 28px; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,.1));
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--navy);
+      box-shadow: 0 0 0 3px rgba(201,168,76,.25);
+    }
+
+    .tl-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.12);
+      border-radius: var(--r-md);
+      padding: 24px 28px;
+      transition: border-color .25s, box-shadow .25s;
+    }
+
+    .tl-card:hover {
+      border-color: rgba(201,168,76,.4);
+      box-shadow: var(--shadow-card);
+    }
+
+    .tl-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .tl-role {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .tl-date {
+      font-size: .78rem;
+      color: var(--gold);
+      font-weight: 600;
+      white-space: nowrap;
+      background: rgba(201,168,76,.1);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    .tl-org {
+      font-size: .9rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .tl-location {
+      font-size: .82rem;
+      color: var(--gray-300);
+      margin-bottom: 12px;
+    }
+
+    .tl-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tl-bullets li {
+      display: flex;
+      gap: 10px;
+      font-size: .88rem;
+      color: var(--gray-100);
+      line-height: 1.6;
+    }
+
+    .tl-bullets li::before {
+      content: '▸';
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Skills ─────────────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-group {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.14);
+      border-radius: var(--r-md);
+      padding: 24px;
+    }
+
+    .skill-group-title {
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-group-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(201,168,76,.2);
+    }
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 5px 13px;
+      background: rgba(201,168,76,.08);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 100px;
+      font-size: .8rem;
+      color: var(--gray-100);
+      font-weight: 500;
+    }
+
+    .chip-lang {
+      background: rgba(30,58,95,.6);
+      border-color: rgba(30,58,95,1);
+    }
+
+    /* ── Projects ───────────────────────────────────────────── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.12);
+      border-radius: var(--r-md);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+
+    .project-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .project-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(201,168,76,.12);
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .project-name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .project-desc {
+      font-size: .87rem;
+      color: var(--gray-300);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stack-tag {
+      padding: 3px 10px;
+      background: rgba(11,23,40,.8);
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 4px;
+      font-size: .72rem;
+      color: var(--gold-light);
+      font-family: 'Courier New', monospace;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+      padding-top: 4px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .project-link {
+      font-size: .8rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color .2s;
+    }
+
+    .project-link:hover { color: var(--gold-light); }
+
+    /* ── Awards ─────────────────────────────────────────────── */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .award-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.15);
+      border-radius: var(--r-md);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .award-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .award-name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .award-org {
+      font-size: .84rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .award-date {
+      font-size: .77rem;
+      color: var(--gray-500);
+    }
+
+    .award-desc {
+      font-size: .84rem;
+      color: var(--gray-300);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* ── Volunteering ───────────────────────────────────────── */
+    .vol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .vol-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.12);
+      border-radius: var(--r-md);
+      padding: 22px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .vol-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .vol-role {
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .vol-org {
+      font-size: .84rem;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    .vol-date {
+      font-size: .77rem;
+      color: var(--gray-500);
+    }
+
+    /* ── Education ──────────────────────────────────────────── */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .edu-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.14);
+      border-radius: var(--r-md);
+      padding: 24px;
+    }
+
+    .edu-degree {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .edu-inst {
+      font-size: .88rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .edu-meta {
+      font-size: .8rem;
+      color: var(--gray-500);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      background: var(--black);
+      padding: 60px 0 32px;
+      border-top: 1px solid rgba(201,168,76,.15);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 40px;
+    }
+
+    .footer-name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      color: var(--gray-300);
+      font-size: .9rem;
+      max-width: 400px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: var(--r-sm);
+      color: var(--gray-300);
+      text-decoration: none;
+      font-size: .82rem;
+      font-weight: 600;
+      transition: all .2s;
+    }
+
+    .footer-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,.08);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: .8rem;
+      color: var(--gray-500);
+    }
+
+    .footer-email {
+      font-size: .82rem;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ── Divider ────────────────────────────────────────────── */
+    .gold-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 2px;
+      margin-bottom: 40px;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ── Print ──────────────────────────────────────────────── */
+    @media print {
+      nav, .hero-actions, footer { display: none; }
+      section { padding: 32px 0; break-inside: avoid; }
+      body { background: white; color: black; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────── -->
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#">LM.</a>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#volunteering">Volunteering</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">
+          <span></span>
+          <p>Systems Engineering Student · Researcher · Scholar</p>
+        </div>
+
+        <h1>
+          Lizzy Pamela<br />
+          <span class="accent">Mejía Mejía</span>
+        </h1>
+
+        <p class="hero-headline">
+          Systems Engineering student with applied research experience, data quality workflows,
+          and technical documentation. Seeking opportunities in backend, data & systems with measurable impact.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">Backend Development</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Research</span>
+          <span class="tag">Python</span>
+          <span class="tag">SDG-6 Research</span>
+          <span class="tag">Bilingual C1</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:02lizzymejia12@gmail.com">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Get in Touch
+          </a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/lizzy-pamela-mejia-mejia-932605270" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn btn-outline" href="https://github.com/LizzyPamela" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Comayagua, Honduras
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.6 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.51 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6.59 6.59l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +504 8814-5882
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            02lizzymejia12@gmail.com
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="initials-block">LM</div>
+        <div class="stat-cards">
+          <div class="stat-card">
+            <div class="stat-number">11+</div>
+            <div class="stat-label">Awards</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Experiences</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">68+</div>
+            <div class="stat-label">Courses</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Volunteer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Summary ────────────────────────────────────────────── -->
+<section id="summary">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>About</p></div>
+      <h2 class="section-title">Professional Summary</h2>
+    </div>
+    <div class="summary-grid">
+      <div class="summary-item">Interdisciplinary research experience aligned with SDG 6 — Clean Water and Sanitation, combining systems modeling, field data collection, and technical documentation.</div>
+      <div class="summary-item">Experience in data collection & validation, reporting, and cross-sector coordination with international organizations (USAID, Conservation International, EU, Red Cross).</div>
+      <div class="summary-item">Student leader and mentor focused on academic excellence, community impact, and knowledge transfer — founding and leading academic societies at university level.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Experience ─────────────────────────────────────────── -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Career</p></div>
+      <h2 class="section-title">Experience</h2>
+      <p class="section-desc">Research, internships, and applied technical roles across academia and international organizations.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Research Data Engineer</div>
+            <span class="tl-date">March 2026 – Present</span>
+          </div>
+          <div class="tl-org">The University of Alabama</div>
+          <div class="tl-location">Remote</div>
+          <ul class="tl-bullets">
+            <li>Support an international research collaboration analyzing epistemic delegitimization and trust dynamics in Honduras.</li>
+            <li>Design and implement data processing pipelines to collect, clean, and structure heterogeneous research data.</li>
+            <li>Conduct data preprocessing, transformation, and exploratory analysis to prepare datasets for downstream research methods.</li>
+            <li>Collaborate with multidisciplinary researchers to ensure data integrity, reproducibility, and analytical rigor.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Member Representative — Commission for Sustainability Initiatives</div>
+            <span class="tl-date">Feb 2026 – Present</span>
+          </div>
+          <div class="tl-org">Universidad Nacional Autónoma de Honduras (UNAH)</div>
+          <div class="tl-location">Comayagua, Honduras</div>
+          <ul class="tl-bullets">
+            <li>Appointed by the Campus Directorate to serve as a member of the Sustainability Commission of UNAH Comayagua.</li>
+            <li>Support the design and evaluation of sustainability-focused initiatives.</li>
+            <li>Participate in cross-functional coordination between academic and administrative stakeholders.</li>
+            <li>Contribute to institutional discussions on sustainable development and strategic implementation.</li>
+          </ul>
+        </div>
+      </div>
+      
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Undergraduate Research Scholar — SDG-6 Water Sustainability</div>
+            <span class="tl-date">Jun 2025 – Present</span>
+          </div>
+          <div class="tl-org">Universidad Nacional Autónoma de Honduras (UNAH)</div>
+          <div class="tl-location">Comayagua, Honduras</div>
+          <ul class="tl-bullets">
+            <li>Conducting applied research on water systems sustainability under UN SDG-6 framework.</li>
+            <li>Performing data analysis, system modeling, and generating technical documentation for academic publication.</li>
+            <li>Collaborating with multidisciplinary teams and presenting progress to faculty review boards.</li>
+            <li>Awarded UNAH Undergraduate Research Scholarship (2025–2026).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Research Assistant — Disinformation & Fake News Detection</div>
+            <span class="tl-date">Jul 2025 – Nov 2025</span>
+          </div>
+          <div class="tl-org">FRENAEL & European Union Research Initiative</div>
+          <ul class="tl-bullets">
+            <li>Supported research on disinformation detection methodologies and fake news classification.</li>
+            <li>Assisted with data collection, literature review, and structured reporting for EU-funded project.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Intern — Environmental Conservation Coordination</div>
+            <span class="tl-date">Sep 2024 – Dec 2024</span>
+          </div>
+          <div class="tl-org">USAID – Conservation International</div>
+          <ul class="tl-bullets">
+            <li>Coordinated logistics and data collection for conservation field programs.</li>
+            <li>Validated environmental datasets and produced structured reports for stakeholder review.</li>
+            <li>Liaised between field teams and organizational leadership to ensure project continuity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-role">Technical Internship — Salesforce CRM & Data Management</div>
+            <span class="tl-date">Feb 2024 – Jun 2024</span>
+          </div>
+          <div class="tl-org">Junior Achievement — Salesforce Initiative</div>
+          <ul class="tl-bullets">
+            <li>Optimized CRM workflows in Salesforce to improve lead tracking and reporting accuracy.</li>
+            <li>Managed data integrity pipelines and generated executive-facing analytics dashboards.</li>
+            <li>Applied Agile/Scrum methodologies to sprint planning and delivery cycles.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Education ──────────────────────────────────────────── -->
+<section id="education">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Academic</p></div>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-degree">Ingeniería en Sistemas</div>
+        <div class="edu-inst">Universidad Nacional Autónoma de Honduras (UNAH)</div>
+        <div class="edu-meta">
+          <span>Comayagua, Honduras</span>
+          <span>May 2021 – May 2026</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">Licenciatura en Administración y Generación de Empresas</div>
+        <div class="edu-inst">Universidad Nacional Autónoma de Honduras (UNAH)</div>
+        <div class="edu-meta">
+          <span>Comayagua, Honduras</span>
+          <span>Sep 2023 – May 2026</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">Associate's Degree — Computer Systems Technology</div>
+        <div class="edu-inst">Fundación Universitaria Konrad Lorenz</div>
+        <div class="edu-meta">
+          <span>Jan 2026 – Jun 2026</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">Bilingual Executive Assistant · ESL Teaching Certification</div>
+        <div class="edu-inst">Instituto Dr. Lorenzo Cervantes</div>
+        <div class="edu-meta">
+          <span>La Paz, Honduras</span>
+          <span>Feb 2018 – Nov 2020</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Skills ─────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Capabilities</p></div>
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <div class="skill-group-title">Programming</div>
+        <div class="skill-chips">
+          <span class="chip">Python</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+          <span class="chip">Sequelize</span>
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Data & AI</div>
+        <div class="skill-chips">
+          <span class="chip">SQL</span>
+          <span class="chip">Data Analysis</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Google Colab</span>
+          <span class="chip">Kaggle</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Scikit-learn</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">APIs & Infrastructure</div>
+        <div class="skill-chips">
+          <span class="chip">REST APIs</span>
+          <span class="chip">Swagger / OpenAPI</span>
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Spring Security</span>
+          <span class="chip">Hibernate</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Process & Management</div>
+        <div class="skill-chips">
+          <span class="chip">Project Management</span>
+          <span class="chip">Scrum / Agile</span>
+          <span class="chip">Technical Documentation</span>
+          <span class="chip">CRM (Salesforce)</span>
+          <span class="chip">RPA / Automation</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Soft Skills</div>
+        <div class="skill-chips">
+          <span class="chip">Leadership</span>
+          <span class="chip">Critical Thinking</span>
+          <span class="chip">Research Methods</span>
+          <span class="chip">Cross-cultural Collaboration</span>
+          <span class="chip">Mentoring</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-chips">
+          <span class="chip chip-lang">Spanish — Native</span>
+          <span class="chip chip-lang">English — C1 Advanced</span>
+          <span class="chip chip-lang">German — A1</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Projects ───────────────────────────────────────────── -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Portfolio</p></div>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-desc">A curated selection of academic, research, and personal engineering projects.</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon"> </div>
+        <div class="project-name">PumaNeoLang (PNL)</div>
+        <p class="project-desc">Custom programming language interpreter built from scratch with a graphical IDE. Implements lexer, parser, and runtime evaluation with syntax highlighting.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Pandas</span>
+          <span class="stack-tag">Tkinter</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/LizzyPamela" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"> </div>
+        <div class="project-name">Spring Boot 3 REST API</div>
+        <p class="project-desc">Production-grade REST API with JWT authentication, role-based access control, Hibernate ORM mappings, and full Swagger/OpenAPI documentation.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Java 17</span>
+          <span class="stack-tag">Spring Boot</span>
+          <span class="stack-tag">Spring Security</span>
+          <span class="stack-tag">MySQL</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/LizzyPamela" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"> </div>
+        <div class="project-name">Python AI/ML Research Toolkit</div>
+        <p class="project-desc">Data science pipeline for scientific research: preprocessing, feature engineering, model training with Scikit-learn, and publication-quality visualizations.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">NumPy</span>
+          <span class="stack-tag">Scikit-learn</span>
+          <span class="stack-tag">Matplotlib</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/LizzyPamela" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"> </div>
+        <div class="project-name">Power BI Data Analytics Dashboard</div>
+        <p class="project-desc">Business intelligence solution with interactive dashboards, DAX calculated measures, time-intelligence functions, and executive-ready reporting formats.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Power BI</span>
+          <span class="stack-tag">DAX</span>
+          <span class="stack-tag">Data Modeling</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/LizzyPamela" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"> </div>
+        <div class="project-name">Enterprise Bot Automation (RPA)</div>
+        <p class="project-desc">Robotic Process Automation workflows for enterprise data processing, reducing manual entry time and improving accuracy using Automation Anywhere.</p>
+        <div class="project-stack">
+          <span class="stack-tag">RPA</span>
+          <span class="stack-tag">Automation Anywhere</span>
+          <span class="stack-tag">Process Design</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/LizzyPamela" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"> </div>
+        <div class="project-name">Oracle ONE Front-end Portfolio</div>
+        <p class="project-desc">Full front-end portfolio developed during Oracle Next Education scholarship program, demonstrating responsive design, React components, and modern JS patterns.</p>
+        <div class="project-stack">
+          <span class="stack-tag">HTML5</span>
+          <span class="stack-tag">CSS3</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">React</span>
+        </div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/LizzyPamela" target="_blank">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Awards ─────────────────────────────────────────────── -->
+<section id="awards">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Recognition</p></div>
+      <h2 class="section-title">Awards & Scholarships</h2>
+      <p class="section-desc">Competitive scholarships, leadership programs, and research recognitions from national and international organizations.</p>
+    </div>
+    <div class="awards-grid">
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">UNAH Undergraduate Research Scholarship</div>
+        <div class="award-org">Universidad Nacional Autónoma de Honduras</div>
+        <div class="award-date">May 2025 – Mar 2026</div>
+        <div class="award-desc">Competitive research scholarship supporting SDG-6 water sustainability investigation. Full funding for academic year research program.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">ISFiT Alumni 2025</div>
+        <div class="award-org">International Student Festival in Trondheim</div>
+        <div class="award-date">Mar 2025</div>
+        <div class="award-desc">Selected participant at one of the world's largest international student festivals in Norway, focused on global dialogue and peace.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">Aspire Leadership Program 2025</div>
+        <div class="award-org">Aspire Institute</div>
+        <div class="award-date">Jan 2025 – Mar 2025</div>
+        <div class="award-desc">Competitive global leadership development program for high-achieving students from emerging economies.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">Talento TIC Scholarship</div>
+        <div class="award-org">SENACIT / IHCIETI — Honduras</div>
+        <div class="award-date">Oct 2024 – Apr 2025</div>
+        <div class="award-desc">National technology talent scholarship for outstanding engineering students selected through competitive evaluation.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">Junior Researchers Training Program 2024</div>
+        <div class="award-org">SENACIT / IHCIETI</div>
+        <div class="award-date">May 2024 – Nov 2024</div>
+        <div class="award-desc">Selective national program developing research methodologies and scientific communication skills for emerging researchers.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">Mujer Digital Scholarship</div>
+        <div class="award-org">Junior Achievement</div>
+        <div class="award-date">Jul 2023 – Feb 2024</div>
+        <div class="award-desc">Women in technology scholarship providing advanced digital skills training and mentorship in the tech sector.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">Samsung Innovation Campus Scholarship</div>
+        <div class="award-org">Samsung</div>
+        <div class="award-date">May 2023 – Jul 2023</div>
+        <div class="award-desc">Competitive Samsung-sponsored program for innovation and technology skill development for promising students.</div>
+      </div>
+
+      <div class="award-card">
+        <span class="award-icon"> </span>
+        <div class="award-name">Oracle Next Education (ONE) — Front-end Track</div>
+        <div class="award-org">Oracle / Alura Latam</div>
+        <div class="award-date">Apr 2023 – Oct 2023</div>
+        <div class="award-desc">Full-stack scholarship covering modern front-end technologies: HTML, CSS, JavaScript, and React within the F2 T5 cohort.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Volunteering ───────────────────────────────────────── -->
+<section id="volunteering">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Community</p></div>
+      <h2 class="section-title">Volunteering & Leadership</h2>
+      <p class="section-desc">Active contributor to academic governance, humanitarian organizations, and student mentorship initiatives.</p>
+    </div>
+    <div class="vol-grid">
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">President — RTAS Academic Tutoring Society</div>
+          <div class="vol-org">UNAH</div>
+          <div class="vol-date">Jun 2025 – Present</div>
+        </div>
+      </div>
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">Founder — HECAU Student Association</div>
+          <div class="vol-org">Self-founded Leadership & Mentorship Initiative</div>
+          <div class="vol-date">Jan 2024 – Present</div>
+        </div>
+      </div>
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">Data Analyst — Health Prevention Program</div>
+          <div class="vol-org">Honduran Red Cross</div>
+          <div class="vol-date">Nov 2024 – Aug 2025</div>
+        </div>
+      </div>
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">Faculty Secretary — Student Governance</div>
+          <div class="vol-org">UNAH Faculty Council</div>
+          <div class="vol-date">Jun 2024 – Aug 2025</div>
+        </div>
+      </div>
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">Participant — Transformadores de Honduras</div>
+          <div class="vol-org">Social Innovation Program</div>
+          <div class="vol-date">Jun 2024 – Oct 2024</div>
+        </div>
+      </div>
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">Remote Volunteer</div>
+          <div class="vol-org">Volunteers for Peace (VFP)</div>
+          <div class="vol-date">Apr 2024 – Aug 2024</div>
+        </div>
+      </div>
+
+      <div class="vol-card">
+        <div class="vol-dot"></div>
+        <div>
+          <div class="vol-role">General Volunteer — Community Access</div>
+          <div class="vol-org">USAID CASC Program</div>
+          <div class="vol-date">Apr 2024 – Jun 2024</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Lizzy Pamela Mejía</div>
+        <p class="footer-tagline">Systems Engineering student passionate about research, data, and building systems that create measurable impact.</p>
+      </div>
+      <div class="footer-links">
+        <a class="footer-link" href="https://www.linkedin.com/in/lizzy-pamela-mejia-mejia-932605270" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a class="footer-link" href="https://github.com/LizzyPamela" target="_blank" rel="noopener" title="GitHub">gh</a>
+        <a class="footer-link" href="mailto:02lizzymejia12@gmail.com" title="Email">@</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Lizzy Pamela Mejía Mejía · Comayagua, Honduras</span>
+      <a class="footer-email" href="mailto:02lizzymejia12@gmail.com">02lizzymejia12@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

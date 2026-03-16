@@ -1,0 +1,112 @@
+[
+  {
+    "key": "award-unah-undergrad-research-2025-05",
+    "org": "UNAH",
+    "name": "Undergraduate Research Scholarship",
+    "start": "2025-05",
+    "end": "2026-03",
+    "duration": "10 months",
+    "tags": ["scholarship", "research"],
+    "cvTargets": ["industry", "scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "award-isfit-alumni-2025-03",
+    "org": "ISFiT",
+    "name": "ISFiT Alumni 2025",
+    "start": "2025-03",
+    "end": "2025-03",
+    "duration": "1 month",
+    "tags": ["program"],
+    "cvTargets": ["scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "award-aspire-leadership-2025-01",
+    "org": "Aspire Institute",
+    "name": "Aspire Leadership Program 2025",
+    "start": "2025-01",
+    "end": "2025-03",
+    "duration": "3 months",
+    "tags": ["leadership", "program"],
+    "cvTargets": ["industry", "scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "award-senacit-talento-tic-2024-10",
+    "org": "SENACIT/IHCIETI",
+    "name": "Talento TIC Scholarship for Digital Development in Latin America and the Caribbean",
+    "start": "2024-10",
+    "end": "2025-04",
+    "duration": "6 months",
+    "tags": ["scholarship", "tech"],
+    "cvTargets": ["industry", "scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "award-senacit-junior-researchers-2024-05",
+    "org": "SENACIT/IHCIETI",
+    "name": "Junior Researchers Training Program 2024",
+    "start": "2024-05",
+    "end": "2024-11",
+    "duration": "6 months",
+    "tags": ["research", "program"],
+    "cvTargets": ["scholarship", "general"],
+    "show": true
+  },
+  {
+    "key": "award-ja-mujer-digital-2023-07",
+    "org": "JA Americas",
+    "name": "Junior Achievement — Mujer Digital Scholarship",
+    "start": "2023-07",
+    "end": "2024-02",
+    "duration": "7 months",
+    "tags": ["scholarship", "program"],
+    "cvTargets": ["general"],
+    "show": true
+  },
+  {
+    "key": "award-samsung-innovation-campus-2023-05",
+    "org": "Fundación Grupo Terra, Samsung",
+    "name": "Samsung Innovation Campus Scholarship",
+    "start": "2023-05",
+    "end": "2023-07",
+    "duration": "2 months",
+    "tags": ["scholarship", "tech"],
+    "cvTargets": ["general"],
+    "show": true
+  },
+  {
+    "key": "award-oracle-one-frontend-2023-04",
+    "org": "Oracle Next Education (ONE)",
+    "name": "Oracle Next Educación (ONE) F2 T5 Front-end",
+    "start": "2023-04",
+    "end": "2023-10",
+    "duration": "6 months",
+    "tags": ["program", "frontend"],
+    "cvTargets": ["industry", "general"],
+    "show": true
+  },
+  {
+    "key": "award-ihci-english-access-unknown",
+    "org": "IHCI",
+    "name": "English Access Microscholarship Program Honduras",
+    "start": "2019-09",
+    "end": "2020-11",
+    "duration": "1 year",
+    "tags": ["scholarship", "english"],
+    "cvTargets": ["general"],
+    "show": false
+  },
+  {
+    "key": "award-math-olympiads-eri-imai",
+    "org": "Math Olympiads",
+    "name": "Math Champion — Eri Imai",
+    "start": "2014",
+    "end": "2014",
+    "duration": "",
+    "tags": ["honor"],
+    "cvTargets": ["general"],
+    "show": false
+  }
+]

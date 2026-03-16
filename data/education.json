@@ -1,0 +1,38 @@
+[
+   {
+    "key": "edu-konrad-lorenz-2026-01",
+    "institution": "Fundación Universitaria Konrad Lorenz",
+    "program": "Associate's Degree — Computer Technology / Computer Systems Technology",
+    "location": "",
+    "start": "2026-01",
+    "end": "2026-06",
+    "show": true
+  },
+  {
+    "key": "edu-unah-2021-05",
+    "institution": "Universidad Nacional Autónoma de Honduras",
+    "program": "Ingenieria en Sistemas",
+    "location": "Comayagua, Honduras",
+    "start": "2021-05",
+    "end": "2026-05",
+    "show": true
+  },
+  {
+    "key": "edu-unah-2023-09",
+    "institution": "Universidad Nacional Autónoma de Honduras",
+    "program": "Licenciatura en Administración y Generacion de Empresas",
+    "location": "Comayagua, Honduras",
+    "start": "2023-09",
+    "end": "2026-05",
+    "show": true
+  },
+  {
+    "key": "edu-lorenzo-cervantes-2018-02",
+    "institution": "Instituto Dr. Lorenzo Cervantes",
+    "program": "Bilingual Executive Assistant; Assistant Management; Teaching English as a Second/Foreign Language (ESL)",
+    "location": "La Paz, Honduras",
+    "start": "2018-02",
+    "end": "2020-11",
+    "show": true
+  }
+]
