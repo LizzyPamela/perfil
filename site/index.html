@@ -747,6 +747,116 @@
       flex-wrap: wrap;
     }
 
+    /* ── Certifications ─────────────────────────────────────── */
+    .cert-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .cert-filter {
+      padding: 6px 18px;
+      border-radius: 100px;
+      border: 1.5px solid rgba(201,168,76,.3);
+      background: transparent;
+      color: var(--gray-300);
+      font-size: .8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .2s;
+      font-family: var(--font-sans);
+      letter-spacing: .04em;
+    }
+
+    .cert-filter:hover,
+    .cert-filter.active {
+      background: rgba(201,168,76,.12);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .cert-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(201,168,76,.12);
+      border-radius: var(--r-md);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .cert-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .cert-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .cert-area-badge {
+      font-size: .67rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge-engineering { background: rgba(59,130,246,.15); color: #93C5FD; border: 1px solid rgba(59,130,246,.3); }
+    .badge-ai          { background: rgba(139,92,246,.15); color: #C4B5FD; border: 1px solid rgba(139,92,246,.3); }
+    .badge-pm          { background: rgba(201,168,76,.15); color: var(--gold-light); border: 1px solid rgba(201,168,76,.3); }
+    .badge-auditoria   { background: rgba(239,68,68,.15);  color: #FCA5A5; border: 1px solid rgba(239,68,68,.3); }
+    .badge-hr          { background: rgba(16,185,129,.15); color: #6EE7B7; border: 1px solid rgba(16,185,129,.3); }
+    .badge-english     { background: rgba(6,182,212,.15);  color: #67E8F9; border: 1px solid rgba(6,182,212,.3); }
+
+    .cert-name {
+      font-family: var(--font-serif);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.35;
+    }
+
+    .cert-provider {
+      font-size: .82rem;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .cert-date {
+      font-size: .76rem;
+      color: var(--gray-500);
+    }
+
+    .cert-view {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .78rem;
+      color: var(--gold);
+      font-weight: 500;
+      margin-top: auto;
+      padding-top: 6px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
     /* ── Footer ─────────────────────────────────────────────── */
     footer {
       background: var(--black);
@@ -874,6 +984,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#volunteering">Volunteering</a></li>
@@ -1219,6 +1330,161 @@
     </div>
   </div>
 </section>
+
+<!-- ── Certifications ─────────────────────────────────────── -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow"><span></span><p>Credentials</p></div>
+      <h2 class="section-title">Certifications &amp; Diplomas</h2>
+      <p class="section-desc">Verified certificates and diplomas earned across Engineering, AI, Project Management, Audit, and more. Click any card to view the credential.</p>
+    </div>
+    <div class="cert-filters" id="certFilters"></div>
+    <div class="cert-grid" id="certGrid"></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  function fmtDate(d) {
+    if (!d) return '';
+    var p = d.split('-');
+    return MONTHS[parseInt(p[1], 10) - 1] + ' ' + p[0];
+  }
+
+  var AREA_META = {
+    'Engineering': { label: 'Engineering', cls: 'badge-engineering' },
+    'AI':          { label: 'AI & Data',   cls: 'badge-ai' },
+    'PM':          { label: 'Management',  cls: 'badge-pm' },
+    'Auditoria':   { label: 'Audit',       cls: 'badge-auditoria' },
+    'Human Rights':{ label: 'Human Rights',cls: 'badge-hr' },
+    'English':     { label: 'English',     cls: 'badge-english' },
+  };
+
+  var COURSES = [
+    {name:"Project Risk Management PMP Certification",provider:"Udemy",area:"PM",end:"2026-01",url:"https://drive.google.com/file/d/1W3AZs_Q8uxrkAivrdRHTyx4LjmqLXmWB/view?usp=sharing"},
+    {name:"Project Integration Management PMP Certification",provider:"Udemy",area:"PM",end:"2026-01",url:"https://drive.google.com/file/d/145kzt3R-iIprjdVvSPOHN5uIO-4i1994/view?usp=drive_link"},
+    {name:"Professional Certificate in Agile and SCRUM",provider:"Udemy",area:"PM",end:"2026-01",url:"https://drive.google.com/file/d/1yIo4NkiXEAe3AZ8GalxDqWZu6TwJ33v8/view?usp=drive_link"},
+    {name:"Python for Scientific Research",provider:"Udemy",area:"Engineering",end:"2026-01",url:"https://drive.google.com/file/d/1N16z63BROEFIma0Mji7V2oEUY6BcZO3P/view?usp=drive_link"},
+    {name:"Fundamentals of RAG (Retrieval Augmented Generation)",provider:"Udemy",area:"Engineering",end:"2026-01",url:"https://drive.google.com/file/d/1AXT34Aepz5xYUdW1FMsh5U8wTuUdN-io/view?usp=drive_link"},
+    {name:"Python for AI and ML",provider:"Udemy",area:"AI",end:"2026-01",url:"https://drive.google.com/file/d/1y2uAd7ghjNTyhTwtaW_3-aNe0ker3MMN/view?usp=sharing"},
+    {name:"Machine Learning & Python Data Science for Business and AI",provider:"Udemy",area:"AI",end:"2026-01",url:"https://drive.google.com/file/d/1jyHmDlzKQgDXHL8KANV7dr-q_6dk8rvt/view?usp=sharing"},
+    {name:"Introducción a la compilación con Power BI",provider:"Microsoft Learn",area:"AI",end:"2026-01",url:"https://learn.microsoft.com/api/achievements/share/en-us/LizzyPamelaMejiaMejia-0857/UR9TUR63?sharingId=83247DA88EFCD37C"},
+    {name:"Data Analytics for Project Management",provider:"Udemy",area:"AI",end:"2026-01",url:"https://drive.google.com/file/d/1GCg4I-KPQEeennruINHkOgHcxVbNQNFl/view?usp=drive_link"},
+    {name:"Introduction to Project Management",provider:"IBM",area:"PM",end:"2025-10",url:"https://coursera.org/share/b4030a66040593442a53b143bbb63c27"},
+    {name:"Essentials Automation Certification",provider:"Automation Anywhere",area:"AI",end:"2025-10",url:"https://upskill.automationanywhere.com/essentials-automation-certification"},
+    {name:"La virtud de servir",provider:"Aprende.org",area:"PM",end:"2025-09",url:"https://drive.google.com/file/d/1Uz3GF7pcCh3jAgXgW9qoahpcBo3d_YSa/view?usp=drive_link"},
+    {name:"Diplomado en Auditoría de Sistemas de Gestión ISO 19011:2018",provider:"Politecnico Intercontinental",area:"Auditoria",end:"2025-09",url:"https://drive.google.com/file/d/1yK7XkoDPSxEcx81vE90uzVGXJBknNcbW/view?usp=drive_link"},
+    {name:"Generative AI Overview for Project Managers",provider:"Project Management Institute",area:"AI",end:"2025-08",url:"https://www.credly.com/badges/7430c494-cc6d-4eb7-bf20-b6e79043b725/linked_in_profile"},
+    {name:"Descripción del análisis de datos",provider:"Microsoft Learn",area:"Engineering",end:"2025-05",url:"https://learn.microsoft.com/api/achievements/share/en-us/LizzyPamelaMejiaMejia-0857/H7S94E78?sharingId=83247DA88EFCD37C"},
+    {name:"Introduction to Modern AI",provider:"Cisco",area:"AI",end:"2025-05",url:"https://drive.google.com/file/d/1W2T_cmxR81y_66H0ZU5whbMfCqBoxkZW/view?usp=drive_link"},
+    {name:"Data Fundamentals",provider:"IBM",area:"AI",end:"2025-05",url:"https://skills.yourlearning.ibm.com/credential/CREDLY-5ce6af3f-f3a2-4eb9-9d44-690812d45210"},
+    {name:"Integrar Power Pages con tecnologías basadas en la web",provider:"Microsoft Learn",area:"Engineering",end:"2025-04",url:"https://learn.microsoft.com/api/achievements/share/en-us/LizzyPamelaMejiaMejia-0857/8Z5FQRAW?sharingId=83247DA88EFCD37C"},
+    {name:"Information Representation and Data Organization",provider:"Huawei",area:"Engineering",end:"2025-03",url:"https://www.credly.com/badges/66d96601-6093-4704-97fd-9e1af6ca2ee6/linked_in_profile"},
+    {name:"Development and Basic Concepts of Cloud Computing",provider:"Huawei",area:"Engineering",end:"2025-03",url:"https://www.credly.com/badges/80cde133-5800-44af-b0d8-a301c268724e/linked_in_profile"},
+    {name:"Computer Network",provider:"Huawei",area:"Engineering",end:"2025-03",url:"https://www.credly.com/badges/dbf02476-1b56-4dfc-bde7-c220fc657e48/linked_in_profile"},
+    {name:"IT Specialist – JavaScript",provider:"Certiport / Pearson VUE",area:"Engineering",end:"2025-02",url:"https://www.credly.com/badges/6112e3f1-7a06-413f-9aed-6e37f74d7893/linked_in_profile"},
+    {name:"Search and AI",provider:"Huawei",area:"AI",end:"2025-02",url:"https://www.credly.com/badges/76da87d0-8e04-428c-a949-240ed2d581ee/linked_in_profile"},
+    {name:"Software Engineering Job Simulation",provider:"Accenture Nordics",area:"Engineering",end:"2025-01",url:"https://drive.google.com/file/d/1jzBVOQn0cZafGn37WdtH6Jpgt7tKyXB6/view?usp=drive_link"},
+    {name:"Data Science & Analytics",provider:"HP Life",area:"Engineering",end:"2025-01",url:"https://drive.google.com/file/d/10bD8aWe6iWy6fKzUVjESCctTBxzGuQBp/view?usp=drive_link"},
+    {name:"CCNA: Introducción a Redes",provider:"Cisco",area:"Engineering",end:"2025-01",url:"https://drive.google.com/file/d/14vto96MzEqxaYPADVgHBRRqsOs0u19Kh/view?usp=drive_link"},
+    {name:"Introduction to Modern AI",provider:"Cisco",area:"AI",end:"2025-01",url:"https://www.credly.com/badges/3d5fb9cd-87c3-4b7a-ad2e-94adb82e2544/linked_in_profile"},
+    {name:"Disciplina en el trabajo",provider:"Aprende.org",area:"PM",end:"2024-10",url:"https://drive.google.com/file/d/1FNRiM3KZuYSAzebsEzPKztBFwjttWTrE/view?usp=drive_link"},
+    {name:"Decisiones inteligentes para la protección del medio ambiente",provider:"Aprende.org",area:"PM",end:"2024-10",url:"https://drive.google.com/file/d/16Pkm6LUoEmubbB6eYIjWl3ksgsfDULFx/view?usp=drive_link"},
+    {name:"Tomemos las redes sociales: creación de contenidos digitales sobre migración",provider:"OIM ONU Migración",area:"Human Rights",end:"2024-10",url:"https://drive.google.com/file/d/1hSW2FORqb90MIeu9yBCXdPyWU8tzCzS9/view?usp=drive_link"},
+    {name:"Gestión de la Migración Laboral en América Latina",provider:"OIM ONU Migración",area:"Human Rights",end:"2024-10",url:"https://drive.google.com/file/d/1clzbQtd5ag_qJdlCSwvM6-eYT-tIIq_6/view?usp=drive_link"},
+    {name:"Trata de Personas: protección y asistencia a víctimas",provider:"OIM ONU Migración",area:"Human Rights",end:"2024-09",url:"https://drive.google.com/file/d/1zZ1LVCKpl_FWzNw-nBncHAs99ZzOhFdb/view?usp=drive_link"},
+    {name:"Migración y Juventud",provider:"OIM ONU Migración",area:"Human Rights",end:"2024-09",url:"https://drive.google.com/file/d/1FW8yeWaXwS1gzw8V4eNrV_D70wYdjNUo/view?usp=drive_link"},
+    {name:"Bienestar Ocupacional",provider:"(Certificado)",area:"Engineering",end:"2024-09",url:"https://drive.google.com/file/d/12u3u6McAjhuu7n2XU5fYkywp-EnLuP0W/view?usp=drive_link"},
+    {name:"Orientación Sociolaboral",provider:"USAID",area:"PM",end:"2024-06",url:"https://drive.google.com/file/d/1a9rHNLGfL5iLrquVPgfYT77Gwp_GLhlP/view?usp=drive_link"},
+    {name:"Spring Framework 6 & Spring Boot 3 desde cero a experto",provider:"Udemy",area:"Engineering",end:"2024-06",url:"https://drive.google.com/file/d/10TsFKR_lw3U89EP7DsDVAHpDznlQanGM/view?usp=drive_link"},
+    {name:"Git y GitHub Completo desde Cero",provider:"Udemy",area:"Engineering",end:"2024-06",url:"https://drive.google.com/file/d/1vm5InFdO8j_gmGox1FFIjawt2QX0fKMx/view?usp=drive_link"},
+    {name:"Diseño Web Profesional — Curso Completo",provider:"Udemy",area:"Engineering",end:"2024-06",url:"https://drive.google.com/file/d/1sIk3c1cYFtVhPuQ0hYLaz2b5EoyK7AJk/view?usp=drive_link"},
+    {name:"Habilidades Blandas",provider:"USAID",area:"PM",end:"2024-04",url:"https://drive.google.com/file/d/1Xml6P2RFbw_J-B0M0IcQ_nFnDxrb-T3j/view?usp=drive_link"},
+    {name:"NDG Linux Essentials",provider:"Cisco",area:"Engineering",end:"2024-02",url:"https://drive.google.com/file/d/1zWXOQSuvpLkWHyOEmMoy8Ppp6WvemW8l/view?usp=drive_link"},
+    {name:"Master en Colecciones y Estructuras de Datos en Java",provider:"Udemy",area:"Engineering",end:"2023-11",url:"https://drive.google.com/file/d/1LgXPUhzA_WNtTMufzUzY9NUcsAhagSZ6/view?usp=drive_link"},
+    {name:"Fundamentos de Nube AWS",provider:"Amazon Web Services",area:"Engineering",end:"2023-11",url:"https://drive.google.com/file/d/19oVFjehXCxGvSpu0zMECI7DiCrfpCh3-/view?usp=drive_link"},
+    {name:"AWS Cloud Practitioner Essentials",provider:"Amazon Web Services",area:"Engineering",end:"2023-11",url:"https://drive.google.com/file/d/1u4s4VswU8yAQTRs3S_kxOqlS1hOWTPDz/view?usp=drive_link"},
+    {name:"Oracle Next Education F2 T5 (Front-end)",provider:"Oracle / ONE",area:"Engineering",end:"2023-10",url:"https://drive.google.com/file/d/1LoNzeuxCtWrTUWj7vCy6fc1i2WgvOv2m/view?usp=drive_link"},
+    {name:"Introducción al Coding",provider:"Junior Achievement (JA Américas)",area:"Engineering",end:"2023-10",url:"https://drive.google.com/file/d/1XT9HhDmEaby1rdUp5WortTChB1DtRo-2/view?usp=drive_link"},
+    {name:"Aprende a Programar Java desde Cero hasta Sistemas",provider:"Udemy",area:"Engineering",end:"2023-10",url:"https://drive.google.com/file/d/1SpGaaIwVGMKFumIA_3pVRXeGEaiMl2T4/view?usp=drive_link"},
+    {name:"Economía Circular",provider:"HP Foundation",area:"PM",end:"2023-08",url:"https://drive.google.com/file/d/1ufV1SJQQqH8IMIiDpX6l6F72Yi8AMrnr/view?usp=drive_link"},
+    {name:"VUCA Leadership",provider:"Great Learning",area:"PM",end:"2023-07",url:"https://drive.google.com/file/d/1fl04C3sX609mZOP8mTbPCsH5owMXcIJT/view?usp=drive_link"},
+    {name:"Habilidades para la vida y el trabajo",provider:"Junior Achievement (JA Américas)",area:"PM",end:"2023-07",url:"https://drive.google.com/file/d/1yU-0D3yfPlWv6OB7QBAOY_ZZj62BzOhE/view?usp=drive_link"},
+    {name:"Gestión de Talento Humano",provider:"INFOP",area:"PM",end:"2023-05",url:"https://drive.google.com/file/d/1KIDmkwoW8p_kXAPYuEGKvncYjxJAY5dq/view?usp=drive_link"},
+    {name:"Upper-Intermediate English as a Second Language",provider:"INFOP",area:"English",end:"2023-01",url:"https://drive.google.com/file/d/1wzbZv39SG0xLcNCufW5PlIZELcgvuqpe/view?usp=drive_link"},
+    {name:"Intermediate English as a Second Language",provider:"INFOP",area:"English",end:"2023-01",url:"https://drive.google.com/file/d/1loI2h6pNqNxraU9bF4kmRfzU0xEy0hOo/view?usp=drive_link"},
+    {name:"ESL004: Advanced English as a Second Language",provider:"Saylor Academy",area:"English",end:"2023-01",url:"https://drive.google.com/file/d/1wRHuAn8suhJ6tkh_L38P7H7giNXOe8pW/view?usp=drive_link"},
+    {name:"ESL003: Upper-Intermediate English as a Second Language",provider:"Saylor Academy",area:"English",end:"2023-01",url:"https://drive.google.com/file/d/1wzbZv39SG0xLcNCufW5PlIZELcgvuqpe/view?usp=drive_link"},
+    {name:"ESL002: Intermediate English as a Second Language",provider:"Saylor Academy",area:"English",end:"2023-01",url:"https://drive.google.com/file/d/1loI2h6pNqNxraU9bF4kmRfzU0xEy0hOo/view?usp=drive_link"},
+    {name:"Advanced English as a Second Language",provider:"INFOP",area:"English",end:"2023-01",url:"https://drive.google.com/file/d/1wRHuAn8suhJ6tkh_L38P7H7giNXOe8pW/view?usp=drive_link"},
+    {name:"Intro to AI Ethics",provider:"Kaggle",area:"Engineering",end:"2022-12",url:"https://drive.google.com/file/d/1W2T_cmxR81y_66H0ZU5whbMfCqBoxkZW/view?usp=drive_link"},
+    {name:"Pedagogía",provider:"AulaFacil",area:"Human Rights",end:"2022-09",url:"https://drive.google.com/file/d/1bXdBRbgRqfkfzQzSfwrJEwzJqCZHZca7/view?usp=drive_link"},
+    {name:"Basic English 1: Elementary",provider:"King's College London",area:"English",end:"2021-04",url:"https://drive.google.com/file/d/1N44VpKYv1XbWHy_BJjk2OGNcXWiDXCud/view?usp=drive_link"},
+    {name:"Servicio de Calidad al Cliente",provider:"INFOP",area:"PM",end:"2020-08",url:"https://drive.google.com/file/d/1CvNkldT7-4HTNBRkaJPCc7X348BtdN6O/view?usp=drive_link"},
+    {name:"Normas Básicas de Bioseguridad",provider:"INFOP",area:"PM",end:"2020-08",url:"https://drive.google.com/file/d/15krWEpIQaxWkxtOoqzjagI2MCDq4ma-q/view?usp=drive_link"},
+    {name:"Finanzas Personales",provider:"INFOP",area:"PM",end:"2020-08",url:"https://drive.google.com/file/d/1vFGJC6LqP-khdzKTUz2v6tBVIo2K-BRX/view?usp=drive_link"},
+    {name:"Etiqueta y Protocolo",provider:"INFOP",area:"PM",end:"2020-08",url:"https://drive.google.com/file/d/1aWVv4v0yR7TkNIWNj0LTIB-xx2zq2jtH/view?usp=drive_link"},
+    {name:"English Intermediate 1",provider:"INFOP",area:"English",end:"2020-05",url:"https://drive.google.com/file/d/1BDMh2KR9_fsN-U5N1NDcMW_7XEN6orJU/view?usp=drive_link"},
+    {name:"English Basic 3",provider:"INFOP",area:"English",end:"2019-09",url:"https://drive.google.com/file/d/1isYhW8NoBpJ7plGs2Jlil4rOQfgNtjb-/view?usp=drive_link"},
+    {name:"English Basic 2",provider:"INFOP",area:"English",end:"2019-06",url:"https://drive.google.com/file/d/1isYhW8NoBpJ7plGs2Jlil4rOQfgNtjb-/view?usp=drive_link"},
+    {name:"English Basic 1",provider:"INFOP",area:"English",end:"2018-10",url:"https://drive.google.com/file/d/1isYhW8NoBpJ7plGs2Jlil4rOQfgNtjb-/view?usp=drive_link"}
+  ];
+
+  var AREA_ORDER = ['Engineering','AI','PM','Auditoria','Human Rights','English'];
+  var filtersEl = document.getElementById('certFilters');
+  var gridEl    = document.getElementById('certGrid');
+
+  // Build filter buttons
+  var activeArea = 'all';
+  var areas = ['all'].concat(AREA_ORDER.filter(function(a){
+    return COURSES.some(function(c){ return c.area === a; });
+  }));
+
+  areas.forEach(function(a) {
+    var btn = document.createElement('button');
+    btn.className = 'cert-filter' + (a === 'all' ? ' active' : '');
+    btn.dataset.area = a;
+    btn.textContent = a === 'all' ? 'All (' + COURSES.length + ')' : (AREA_META[a] ? AREA_META[a].label : a);
+    btn.addEventListener('click', function() {
+      activeArea = a;
+      document.querySelectorAll('.cert-filter').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderCards();
+    });
+    filtersEl.appendChild(btn);
+  });
+
+  function renderCards() {
+    var visible = activeArea === 'all' ? COURSES : COURSES.filter(function(c){ return c.area === activeArea; });
+    gridEl.innerHTML = '';
+    visible.forEach(function(c) {
+      var meta = AREA_META[c.area] || { label: c.area, cls: 'badge-pm' };
+      var card = document.createElement('a');
+      card.className = 'cert-card';
+      card.href = c.url;
+      card.target = '_blank';
+      card.rel = 'noopener';
+      card.innerHTML =
+        '<div class="cert-card-header">' +
+          '<div class="cert-name">' + c.name + '</div>' +
+          '<span class="cert-area-badge ' + meta.cls + '">' + meta.label + '</span>' +
+        '</div>' +
+        '<div class="cert-provider">' + c.provider + '</div>' +
+        '<div class="cert-date">' + fmtDate(c.end) + '</div>' +
+        '<div class="cert-view">' +
+          '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>' +
+          'View Certificate' +
+        '</div>';
+      gridEl.appendChild(card);
+    });
+  }
+
+  renderCards();
+})();
+</script>
 
 <!-- ── Projects ───────────────────────────────────────────── -->
 <section id="projects">

@@ -80,7 +80,7 @@
     "end": "2026-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1jyHmDlzKQgDXHL8KANV7dr-q_6dk8rvt/view?usp=sharing",
     "show": true
   },
   {
@@ -92,7 +92,7 @@
     "end": "2026-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://learn.microsoft.com/api/achievements/share/en-us/LizzyPamelaMejiaMejia-0857/UR9TUR63?sharingId=83247DA88EFCD37C",
     "show": true
   },
   {
@@ -104,7 +104,7 @@
     "end": "2026-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1GCg4I-KPQEeennruINHkOgHcxVbNQNFl/view?usp=drive_link",
     "show": true
   },
   {
@@ -116,19 +116,7 @@
     "end": "2025-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-essentials-automation-certification",
-    "provider": "Desconocida",
-    "name": "Essentials Automation Certification",
-    "area": "Engineering",
-    "start": "",
-    "end": "2025-10",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://coursera.org/share/b4030a66040593442a53b143bbb63c27",
     "show": true
   },
   {
@@ -140,7 +128,7 @@
     "end": "2025-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://upskill.automationanywhere.com/essentials-automation-certification",
     "show": true
   },
   {
@@ -152,7 +140,7 @@
     "end": "2025-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1Uz3GF7pcCh3jAgXgW9qoahpcBo3d_YSa/view?usp=drive_link",
     "show": true
   },
   {
@@ -164,21 +152,21 @@
     "end": "2025-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1yK7XkoDPSxEcx81vE90uzVGXJBknNcbW/view?usp=drive_link",
     "show": true
   },
-  {
-    "key": "course-exploring-data-graphs-and-numerical-summaries",
-    "provider": "The Open University (OpenLearn)",
-    "name": "Exploring data: Graphs and numerical summaries",
-    "area": "Engineering",
-    "start": "",
-    "end": "2025-08",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
+  // {
+  //   "key": "course-exploring-data-graphs-and-numerical-summaries",
+  //   "provider": "The Open University (OpenLearn)",
+  //   "name": "Exploring data: Graphs and numerical summaries",
+  //   "area": "Engineering",
+  //   "start": "",
+  //   "end": "2025-08",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // },
   {
     "key": "course-generative-ai-overview-for-project-managers",
     "provider": "Project Management Institute",
@@ -188,21 +176,21 @@
     "end": "2025-08",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/7430c494-cc6d-4eb7-bf20-b6e79043b725/linked_in_profile",
     "show": true
   },
-  {
-    "key": "course-ethics-in-science",
-    "provider": "The Open University (OpenLearn)",
-    "name": "Ethics in science?",
-    "area": "AI",
-    "start": "",
-    "end": "2025-08",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
+  // {
+  //   "key": "course-ethics-in-science",
+  //   "provider": "The Open University (OpenLearn)",
+  //   "name": "Ethics in science?",
+  //   "area": "AI",
+  //   "start": "",
+  //   "end": "2025-08",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // },
   {
     "key": "course-descripcion-del-analisis-de-datos",
     "provider": "Microsoft Learn",
@@ -212,7 +200,7 @@
     "end": "2025-05",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://learn.microsoft.com/api/achievements/share/en-us/LizzyPamelaMejiaMejia-0857/H7S94E78?sharingId=83247DA88EFCD37C",
     "show": true
   },
   {
@@ -224,7 +212,7 @@
     "end": "2025-05",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1W2T_cmxR81y_66H0ZU5whbMfCqBoxkZW/view?usp=drive_link",
     "show": true
   },
   {
@@ -236,7 +224,7 @@
     "end": "2025-05",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://skills.yourlearning.ibm.com/credential/CREDLY-5ce6af3f-f3a2-4eb9-9d44-690812d45210",
     "show": true
   },
   {
@@ -248,7 +236,7 @@
     "end": "2025-04",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://learn.microsoft.com/api/achievements/share/en-us/LizzyPamelaMejiaMejia-0857/8Z5FQRAW?sharingId=83247DA88EFCD37C",
     "show": true
   },
   {
@@ -260,7 +248,7 @@
     "end": "2025-03",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/66d96601-6093-4704-97fd-9e1af6ca2ee6/linked_in_profile",
     "show": true
   },
   {
@@ -272,7 +260,7 @@
     "end": "2025-03",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/80cde133-5800-44af-b0d8-a301c268724e/linked_in_profile",
     "show": true
   },
   {
@@ -284,7 +272,7 @@
     "end": "2025-03",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/dbf02476-1b56-4dfc-bde7-c220fc657e48/linked_in_profile",
     "show": true
   },
   {
@@ -296,21 +284,21 @@
     "end": "2025-02",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/6112e3f1-7a06-413f-9aed-6e37f74d7893/linked_in_profile",
     "show": true
   },
-  {
-    "key": "course-analisis-y-desarrollo-de-software",
-    "provider": "XAcademy",
-    "name": "Análisis y Desarrollo de Software",
-    "area": "Engineering",
-    "start": "",
-    "end": "2025-02",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
+  // {
+  //   "key": "course-analisis-y-desarrollo-de-software",
+  //   "provider": "XAcademy",
+  //   "name": "Análisis y Desarrollo de Software",
+  //   "area": "Engineering",
+  //   "start": "",
+  //   "end": "2025-02",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // },
   {
     "key": "course-search-and-ai",
     "provider": "Huawei",
@@ -320,7 +308,7 @@
     "end": "2025-02",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/76da87d0-8e04-428c-a949-240ed2d581ee/linked_in_profile",
     "show": true
   },
   {
@@ -332,7 +320,7 @@
     "end": "2025-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1jzBVOQn0cZafGn37WdtH6Jpgt7tKyXB6/view?usp=drive_link",
     "show": true
   },
   {
@@ -344,67 +332,31 @@
     "end": "2025-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/10bD8aWe6iWy6fKzUVjESCctTBxzGuQBp/view?usp=drive_link",
     "show": true
   },
   {
     "key": "course-ccna-introduction-to-networks",
     "provider": "Cisco",
-    "name": "CCNA: Introduction to Networks",
+    "name": "CCNA: Introduccion a Redes",
     "area": "Engineering",
     "start": "",
     "end": "2025-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/14vto96MzEqxaYPADVgHBRRqsOs0u19Kh/view?usp=drive_link",
     "show": true
   },
   {
     "key": "course-overview-of-ai",
     "provider": "Cisco",
-    "name": "Overview of AI",
+    "name": "Introduction to Modern AI",
     "area": "AI",
     "start": "",
     "end": "2025-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-data-science-and-analytics",
-    "provider": "HP LIFE",
-    "name": "Data Science and Analytics",
-    "area": "AI",
-    "start": "",
-    "end": "2025-01",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-ccna-introduccion-a-redes",
-    "provider": "Cisco Networking Academy",
-    "name": "CCNA: Introducción a Redes",
-    "area": "Engineering",
-    "start": "",
-    "end": "2024-11",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-ccna-introduccion-a-redes",
-    "provider": "Cisco",
-    "name": "CCNA Introducción a Redes",
-    "area": "Engineering",
-    "start": "",
-    "end": "2024-11",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://www.credly.com/badges/3d5fb9cd-87c3-4b7a-ad2e-94adb82e2544/linked_in_profile",
     "show": true
   },
   {
@@ -416,7 +368,7 @@
     "end": "2024-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1FNRiM3KZuYSAzebsEzPKztBFwjttWTrE/view?usp=drive_link",
     "show": true
   },
   {
@@ -428,7 +380,7 @@
     "end": "2024-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/16Pkm6LUoEmubbB6eYIjWl3ksgsfDULFx/view?usp=drive_link",
     "show": true
   },
   {
@@ -440,19 +392,7 @@
     "end": "2024-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-tomemos-las-redes-sociales-creacion-de-contenidos-digitales-sobre-migracion",
-    "provider": "OIM ONU Migración",
-    "name": "Tomemos las redes sociales creación de contenidos digitales sobre migración",
-    "area": "Human Rights",
-    "start": "",
-    "end": "2024-10",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1hSW2FORqb90MIeu9yBCXdPyWU8tzCzS9/view?usp=drive_link",
     "show": true
   },
   {
@@ -464,7 +404,7 @@
     "end": "2024-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1clzbQtd5ag_qJdlCSwvM6-eYT-tIIq_6/view?usp=drive_link",
     "show": true
   },
   {
@@ -476,19 +416,7 @@
     "end": "2024-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-trata-de-personas-proteccion-y-asistencia-a-victimas",
-    "provider": "OIM ONU Migración",
-    "name": "Trata de Personas protección y asistencia a víctimas",
-    "area": "Human Rights",
-    "start": "",
-    "end": "2024-09",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1zZ1LVCKpl_FWzNw-nBncHAs99ZzOhFdb/view?usp=drive_link",
     "show": true
   },
   {
@@ -500,7 +428,7 @@
     "end": "2024-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1FW8yeWaXwS1gzw8V4eNrV_D70wYdjNUo/view?usp=drive_link",
     "show": true
   },
   {
@@ -512,7 +440,7 @@
     "end": "2024-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/12u3u6McAjhuu7n2XU5fYkywp-EnLuP0W/view?usp=drive_link",
     "show": true
   },
   {
@@ -524,7 +452,7 @@
     "end": "2024-06",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1a9rHNLGfL5iLrquVPgfYT77Gwp_GLhlP/view?usp=drive_link",
     "show": true
   },
   {
@@ -536,7 +464,7 @@
     "end": "2024-06",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/10TsFKR_lw3U89EP7DsDVAHpDznlQanGM/view?usp=drive_link",
     "show": true
   },
   {
@@ -548,7 +476,7 @@
     "end": "2024-06",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1vm5InFdO8j_gmGox1FFIjawt2QX0fKMx/view?usp=drive_link",
     "show": true
   },
   {
@@ -560,7 +488,7 @@
     "end": "2024-06",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1sIk3c1cYFtVhPuQ0hYLaz2b5EoyK7AJk/view?usp=drive_link",
     "show": true
   },
   {
@@ -572,7 +500,7 @@
     "end": "2024-04",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1Xml6P2RFbw_J-B0M0IcQ_nFnDxrb-T3j/view?usp=drive_link",
     "show": true
   },
   {
@@ -584,7 +512,7 @@
     "end": "2024-02",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1zWXOQSuvpLkWHyOEmMoy8Ppp6WvemW8l/view?usp=drive_linkA",
     "show": true
   },
   {
@@ -596,7 +524,7 @@
     "end": "2023-11",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1LgXPUhzA_WNtTMufzUzY9NUcsAhagSZ6/view?usp=drive_link",
     "show": true
   },
   {
@@ -608,7 +536,7 @@
     "end": "2023-11",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/19oVFjehXCxGvSpu0zMECI7DiCrfpCh3-/view?usp=drive_link",
     "show": true
   },
   {
@@ -620,7 +548,7 @@
     "end": "2023-11",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1u4s4VswU8yAQTRs3S_kxOqlS1hOWTPDz/view?usp=drive_link",
     "show": true
   },
   {
@@ -632,7 +560,7 @@
     "end": "2023-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1SpGaaIwVGMKFumIA_3pVRXeGEaiMl2T4/view?usp=drive_link",
     "show": true
   },
   {
@@ -644,7 +572,7 @@
     "end": "2023-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1LoNzeuxCtWrTUWj7vCy6fc1i2WgvOv2m/view?usp=drive_link",
     "show": true
   },
   {
@@ -656,7 +584,7 @@
     "end": "2023-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1XT9HhDmEaby1rdUp5WortTChB1DtRo-2/view?usp=drive_link",
     "show": true
   },
   {
@@ -668,45 +596,33 @@
     "end": "2023-08",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1ufV1SJQQqH8IMIiDpX6l6F72Yi8AMrnr/view?usp=drive_link",
     "show": true
   },
+  // {
+  //   "key": "course-english-for-stem",
+  //   "provider": "Online Professional English Network (OPEN)",
+  //   "name": "English for STEM",
+  //   "area": "English",
+  //   "start": "",
+  //   "end": "2023-08",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // },
   {
-    "key": "course-economia-circular",
-    "provider": "HP Life",
-    "name": "Economia Circular",
-    "area": "PM",
-    "start": "",
-    "end": "2023-08",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-english-for-stem",
-    "provider": "Online Professional English Network (OPEN)",
-    "name": "English for STEM",
-    "area": "English",
-    "start": "",
-    "end": "2023-08",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-english-for-science-technology-engineering-and-mathematics-stem-mooc-2023",
-    "provider": "Online Professional English Network",
-    "name": "English for Science, Technology, Engineering, and Mathematics (STEM) MOOC 2023",
-    "area": "Engineering",
-    "start": "",
-    "end": "2023-08",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
+  //   "key": "course-english-for-science-technology-engineering-and-mathematics-stem-mooc-2023",
+  //   "provider": "Online Professional English Network",
+  //   "name": "English for Science, Technology, Engineering, and Mathematics (STEM) MOOC 2023",
+  //   "area": "Engineering",
+  //   "start": "",
+  //   "end": "2023-08",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // },
   {
     "key": "course-vuca-leadership",
     "provider": "Great Learning",
@@ -716,7 +632,7 @@
     "end": "2023-07",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1fl04C3sX609mZOP8mTbPCsH5owMXcIJT/view?usp=drive_link",
     "show": true
   },
   {
@@ -728,7 +644,7 @@
     "end": "2023-07",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1yU-0D3yfPlWv6OB7QBAOY_ZZj62BzOhE/view?usp=drive_link",
     "show": true
   },
   {
@@ -740,19 +656,7 @@
     "end": "2023-05",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-gestion-de-talento-humano",
-    "provider": "INFOP",
-    "name": "Gestion de Talento Humano",
-    "area": "PM",
-    "start": "",
-    "end": "2023-05",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1KIDmkwoW8p_kXAPYuEGKvncYjxJAY5dq/view?usp=drive_link",
     "show": true
   },
   {
@@ -764,7 +668,7 @@
     "end": "2023-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1wzbZv39SG0xLcNCufW5PlIZELcgvuqpe/view?usp=drive_link",
     "show": true
   },
   {
@@ -776,7 +680,7 @@
     "end": "2023-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1loI2h6pNqNxraU9bF4kmRfzU0xEy0hOo/view?usp=drive_link",
     "show": true
   },
   {
@@ -788,7 +692,7 @@
     "end": "2023-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1wRHuAn8suhJ6tkh_L38P7H7giNXOe8pW/view?usp=drive_link",
     "show": true
   },
   {
@@ -800,7 +704,7 @@
     "end": "2023-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1wzbZv39SG0xLcNCufW5PlIZELcgvuqpe/view?usp=drive_link",
     "show": true
   },
   {
@@ -812,7 +716,7 @@
     "end": "2023-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1loI2h6pNqNxraU9bF4kmRfzU0xEy0hOo/view?usp=drive_link",
     "show": true
   },
   {
@@ -824,7 +728,7 @@
     "end": "2023-01",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1wRHuAn8suhJ6tkh_L38P7H7giNXOe8pW/view?usp=drive_link",
     "show": true
   },
   {
@@ -836,21 +740,21 @@
     "end": "2022-12",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1W2T_cmxR81y_66H0ZU5whbMfCqBoxkZW/view?usp=drive_link",
     "show": true
   },
-  {
-    "key": "course-introduction-to-ai-ethics",
-    "provider": "Kaggle",
-    "name": "Introduction to AI Ethics",
-    "area": "AI",
-    "start": "",
-    "end": "2022-12",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
+  // {
+  //   "key": "course-introduction-to-ai-ethics",
+  //   "provider": "Kaggle",
+  //   "name": "Introduction to AI Ethics",
+  //   "area": "AI",
+  //   "start": "",
+  //   "end": "2022-12",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // },
   {
     "key": "course-pedagogia",
     "provider": "AulaFacil",
@@ -860,7 +764,7 @@
     "end": "2022-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1bXdBRbgRqfkfzQzSfwrJEwzJqCZHZca7/view?usp=drive_linkhttps://LINK-AL-DIPLOMA",
     "show": true
   },
   {
@@ -872,7 +776,7 @@
     "end": "2021-04",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1N44VpKYv1XbWHy_BJjk2OGNcXWiDXCud/view?usp=drive_link",
     "show": true
   },
   {
@@ -884,7 +788,7 @@
     "end": "2020-08",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1CvNkldT7-4HTNBRkaJPCc7X348BtdN6O/view?usp=drive_link",
     "show": true
   },
   {
@@ -896,7 +800,7 @@
     "end": "2020-08",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/15krWEpIQaxWkxtOoqzjagI2MCDq4ma-q/view?usp=drive_link",
     "show": true
   },
   {
@@ -908,7 +812,7 @@
     "end": "2020-08",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1vFGJC6LqP-khdzKTUz2v6tBVIo2K-BRX/view?usp=drive_link",
     "show": true
   },
   {
@@ -920,19 +824,7 @@
     "end": "2020-08",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  },
-  {
-    "key": "course-normas-basicas-de-bioseguridad",
-    "provider": "INFOP",
-    "name": "Normas Basicas De Bioseguridad",
-    "area": "Human Rights",
-    "start": "",
-    "end": "2020-07",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1aWVv4v0yR7TkNIWNj0LTIB-xx2zq2jtH/view?usp=drive_link",
     "show": true
   },
   {
@@ -944,7 +836,7 @@
     "end": "2020-05",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1BDMh2KR9_fsN-U5N1NDcMW_7XEN6orJU/view?usp=drive_link",
     "show": true
   },
   {
@@ -956,7 +848,7 @@
     "end": "2019-09",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1isYhW8NoBpJ7plGs2Jlil4rOQfgNtjb-/view?usp=drive_link",
     "show": true
   },
   {
@@ -968,7 +860,7 @@
     "end": "2019-06",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1isYhW8NoBpJ7plGs2Jlil4rOQfgNtjb-/view?usp=drive_link",
     "show": true
   },
   {
@@ -980,19 +872,19 @@
     "end": "2018-10",
     "mode": "",
     "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
+    "url": "https://drive.google.com/file/d/1isYhW8NoBpJ7plGs2Jlil4rOQfgNtjb-/view?usp=drive_link",
     "show": true
   },
-  {
-    "key": "course-digitalizacion-de-documentos",
-    "provider": "INFOP",
-    "name": "Digitalización de Documentos",
-    "area": "PM",
-    "start": "",
-    "end": "2018-04",
-    "mode": "",
-    "credentialId": "",
-    "url": "https://LINK-AL-DIPLOMA",
-    "show": true
-  }
+  // {
+  //   "key": "course-digitalizacion-de-documentos",
+  //   "provider": "INFOP",
+  //   "name": "Digitalización de Documentos",
+  //   "area": "PM",
+  //   "start": "",
+  //   "end": "2018-04",
+  //   "mode": "",
+  //   "credentialId": "",
+  //   "url": "https://LINK-AL-DIPLOMA",
+  //   "show": true
+  // }
 ]
